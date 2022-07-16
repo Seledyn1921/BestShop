@@ -1,0 +1,265 @@
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"en\" xmlns=\"http://www.w3.org/1999/html\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n    <title>Best Shop</title>\n    <link rel=\"stylesheet\" href=\"css/reset.css\">\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n    <link href=\"https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;700;800&display=swap\" rel=\"stylesheet\">\n    <link rel=\"stylesheet\" href=\"css/style.css\">\n</head>\n<body>\n<header class=\"page-header\">\n    <div class=\"container\">\n        <span class=\"accent\">BestShop</span>\n        <nav class=\"page-nav\">\n            <ul class=\"page-nav-list\">\n                <li><a href=\"#\">Why Us</a> </li>\n                <li><a href=\"#\">Benefits</a> </li>\n                <li><a href=\"#\">Prices</a> </li>\n                <li><a href=\"#\">Contact</a> </li>\n            </ul>\n        </nav>\n    </div>\n</header>\n\n<section class=\"banner\">\n    <div class=\"container\">\n        <h1 class=\"banner-title\">\n            Sell More !\n        </h1>\n        <p class=\"banner-text\">\n            Open shop on our platform and increase your sales\n        </p>\n        <div class=\"banner-button\">\n            <a href=\"#\" class=\"btn\">Open your shop</a>\n        </div>\n    </div>\n</section>\n\n\n</body>\n\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.html b/index.html
+--- a/index.html	
++++ b/index.html	
+@@ -12,11 +12,11 @@
+     <link rel="stylesheet" href="css/style.css">
+ </head>
+ <body>
+-<header class="page-header">
++<header class="page__header">
+     <div class="container">
+-        <span class="accent">BestShop</span>
+-        <nav class="page-nav">
+-            <ul class="page-nav-list">
++        <span class="logo">BestShop</span>
++        <nav class="page__nav">
++            <ul class="page__nav__list">
+                 <li><a href="#">Why Us</a> </li>
+                 <li><a href="#">Benefits</a> </li>
+                 <li><a href="#">Prices</a> </li>
+@@ -28,18 +28,49 @@
+ 
+ <section class="banner">
+     <div class="container">
+-        <h1 class="banner-title">
++        <h1 class="banner__title">
+             Sell More !
+         </h1>
+-        <p class="banner-text">
++        <p class="banner__text">
+             Open shop on our platform and increase your sales
+         </p>
+-        <div class="banner-button">
++        <div class="banner__button">
+             <a href="#" class="btn">Open your shop</a>
+         </div>
+     </div>
+ </section>
+ 
++<section class="statistics">
++    <div class="container">
++        <h2>The most popular sales platform in country</h2>
++
++        <div class="statistics__container">
++            <div class="statistics__single">
++                <div class="statistics__circle">
++                    <img src="assets/Person.svg" alt="person" class="statistics__img"/>
++                </div>
++                <div class="statistics__number">100000+</div>
++                <div class="statistics__description">daily entries</div>
++            </div>
++
++            <div class="statistics__single">
++                <div class="statistics__circle">
++                    <img src="assets/Eye.svg" alt="person" class="statistics__img"/>
++                </div>
++                <div class="statistics__number">2000000+</div>
++                <div class="statistics__description">seen products<br>every day</div>
++            </div>
++
++            <div class="statistics__single">
++                <div class="statistics__circle">
++                    <img src="assets/Catalog.svg" alt="person" class="statistics__img"/>
++                </div>
++                <div class="statistics__number">10000+</div>
++                <div class="statistics__description">added posts<br>daily</div>
++            </div>
++        </div>
++    </div>
++</section>
+ 
+ </body>
+ 
+Index: css/style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>* {\n    box-sizing: border-box;\n}\n\n.container {\n    margin: 0 auto;\n    width: 1352px;\n}\n\n:root {\n    --color-primary: #08A6E4;\n    --color-primary-shadow: rgba(7, 172,230, .16);\n    --color-redish: #FB3B64;\n    --color-green: #55DFB4;\n    --color-black: #000000;\n    --color-grey:#A5A5A5;\n    --color-grey-light:#F7F7F7;\n    --color-white:#FFFFFF;\n    --Open-Sans: 'Open Sans', sans-serif [300, 400, 700];\n    --Raleway: 'Raleway', sans-serif [300, 400,700];\n}\n\n.page-header {\n    background: #FFFFFF 0 0 no-repeat padding-box;\n    opacity: 1;\n    position: absolute;\n}\n\n.page-header .container {\n    height: 100%;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    border-bottom: 3px solid #A5A5A5;\n\n}\n.page-header .accent {\n    text-align: left;\n    font: normal normal 300 32px/37px Raleway;\n    letter-spacing: 0;\n    color: #08A6E4;\n    opacity: 1;\n    padding: 16px 136px;\n}\n.page-nav-list {\n    display: flex;\n    text-align: center;\n    font: normal normal bold 11px/15px Open Sans;\n    letter-spacing: 3.28px;\n    opacity: 1;\n\n}\n\n.page-nav-list a {\n    padding: 15px 30px;\n    text-transform: uppercase;\n    text-decoration: none;\n    color: #A5A5A5;\n}\n\n.page-nav-list a:hover {\n    border-bottom: 4px solid #08A6E4;\n    opacity: 1;\n    color: #000000;\n}\n\n/*sprawdzić dlaczego webstorm wyrzuca zmienne jako błąd!!*/\n\n/*banner*/\n\n.banner .container{\n    height: 100vh;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-direction: column;\n    padding-top: 10%;\n    background-position: bottom;\n    background-repeat: no-repeat;\n    background-image: url(\"../assets/Background.png\");\n    background-size: contain;\n}\n.banner-title {\n    text-align: center;\n    font: normal normal normal 49px/57px Raleway;\n    letter-spacing: 0;\n    color: #000000;\n    opacity: 1;\n    margin-top: -25%;\n}\n\n.banner-text {\n    text-align: center;\n    font: normal normal normal 16px/22px Open Sans;\n    letter-spacing: 0;\n    color: #000000;\n    opacity: 1;\n    margin-top: -2%;\n    margin-bottom: 2%;\n}\n.btn {\n    background: #08A6E4 0 0 no-repeat padding-box;\n    box-shadow: 27px 3px 14px #07ace629;\n    border-radius: 40px;\n    opacity: 1;\n    text-align: center;\n    font: normal normal 14px/22px Open Sans;\n    letter-spacing: 0;\n    color: #FFFFFF;\n    padding: 12px 140px;\n    text-decoration: none;\n}\n\n.banner-button {\n    display: flex;\n\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/css/style.css b/css/style.css
+--- a/css/style.css	
++++ b/css/style.css	
+@@ -7,26 +7,13 @@
+     width: 1352px;
+ }
+ 
+-:root {
+-    --color-primary: #08A6E4;
+-    --color-primary-shadow: rgba(7, 172,230, .16);
+-    --color-redish: #FB3B64;
+-    --color-green: #55DFB4;
+-    --color-black: #000000;
+-    --color-grey:#A5A5A5;
+-    --color-grey-light:#F7F7F7;
+-    --color-white:#FFFFFF;
+-    --Open-Sans: 'Open Sans', sans-serif [300, 400, 700];
+-    --Raleway: 'Raleway', sans-serif [300, 400,700];
+-}
+-
+-.page-header {
++.page__header {
+     background: #FFFFFF 0 0 no-repeat padding-box;
+     opacity: 1;
+     position: absolute;
+ }
+ 
+-.page-header .container {
++.page__header .container {
+     height: 100%;
+     display: flex;
+     justify-content: space-between;
+@@ -34,7 +21,7 @@
+     border-bottom: 3px solid #A5A5A5;
+ 
+ }
+-.page-header .accent {
++.page__header .logo {
+     text-align: left;
+     font: normal normal 300 32px/37px Raleway;
+     letter-spacing: 0;
+@@ -42,29 +29,29 @@
+     opacity: 1;
+     padding: 16px 136px;
+ }
+-.page-nav-list {
++.page__nav__list {
+     display: flex;
+     text-align: center;
+     font: normal normal bold 11px/15px Open Sans;
+-    letter-spacing: 3.28px;
++    letter-spacing: 3px;
+     opacity: 1;
+ 
+ }
+ 
+-.page-nav-list a {
++.page__nav__list a {
+     padding: 15px 30px;
+     text-transform: uppercase;
+     text-decoration: none;
+     color: #A5A5A5;
+ }
+ 
+-.page-nav-list a:hover {
++.page__nav__list a:hover {
+     border-bottom: 4px solid #08A6E4;
+     opacity: 1;
+     color: #000000;
+ }
+ 
+-/*sprawdzić dlaczego webstorm wyrzuca zmienne jako błąd!!*/
++/*na zmiennych webstorm wyrzuca błędy*/
+ 
+ /*banner*/
+ 
+@@ -80,7 +67,7 @@
+     background-image: url("../assets/Background.png");
+     background-size: contain;
+ }
+-.banner-title {
++.banner__title {
+     text-align: center;
+     font: normal normal normal 49px/57px Raleway;
+     letter-spacing: 0;
+@@ -89,7 +76,7 @@
+     margin-top: -25%;
+ }
+ 
+-.banner-text {
++.banner__text {
+     text-align: center;
+     font: normal normal normal 16px/22px Open Sans;
+     letter-spacing: 0;
+@@ -111,7 +98,81 @@
+     text-decoration: none;
+ }
+ 
+-.banner-button {
++.banner__button {
++    display: flex;
++
++}
++
++/*statystyki*/
++
++.statistics {
++    margin-top: 100px;
++}
++
++.statistics__container {
++    max-width: 850px;
++    margin: 100px auto 120px;
+     display: flex;
++    justify-content: space-between;
++}
++h2 {
++    font-family: 'Raleway', sans-serif;
++    font-size: 2.25rem;
++    text-align: center;
++}
++.statistics__single {
++    max-width: 160px;
++    display: flex;
++    flex-direction: column;
++    justify-content: flex-start;
++    align-items: center;
++    text-align: center;
++    font-family: 'Raleway', sans-serif;
++}
++.statistics__circle {
++    border-radius: 50%;
++    width: 63px;
++    height: 63px;
++    position: relative;
++}
++
++.statistics__img {
++    position: absolute;
++}
++.statistics__single:nth-child(1) .statistics__circle {
++    background-color: #FB3B64;
++}
++
++.statistics__single:nth-child(1) .statistics__img {
++    top: 0;
++    left: 45%;
++}
++
++.statistics__single:nth-child(2) .statistics__circle {
++    background-color:#08A6E4;
++}
++
++.statistics__single:nth-child(2) .statistics__img {
++    top: 14px;
++    left: 47%;
++}
+ 
+-}
+\ No newline at end of file
++.statistics__single:nth-child(3) .statistics__circle {
++    background-color: #55DFB4;
++}
++
++.statistics__single:nth-child(3) .statistics__img {
++    top: 6px;
++    left: 50%;
++}
++.statistics__number {
++    font-size: 1.25rem;
++    font-weight: 800;
++    letter-spacing: 0.1875rem;
++    margin-top: 13px;
++}
++
++.statistics__description {
++    color: #A5A5A5;
++    margin-top: 19px;
++}

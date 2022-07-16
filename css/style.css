@@ -7,26 +7,13 @@
     width: 1352px;
 }
 
-:root {
-    --color-primary: #08A6E4;
-    --color-primary-shadow: rgba(7, 172,230, .16);
-    --color-redish: #FB3B64;
-    --color-green: #55DFB4;
-    --color-black: #000000;
-    --color-grey:#A5A5A5;
-    --color-grey-light:#F7F7F7;
-    --color-white:#FFFFFF;
-    --Open-Sans: 'Open Sans', sans-serif [300, 400, 700];
-    --Raleway: 'Raleway', sans-serif [300, 400,700];
-}
-
-.page-header {
+.page__header {
     background: #FFFFFF 0 0 no-repeat padding-box;
     opacity: 1;
     position: absolute;
 }
 
-.page-header .container {
+.page__header .container {
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -34,7 +21,7 @@
     border-bottom: 3px solid #A5A5A5;
 
 }
-.page-header .accent {
+.page__header .logo {
     text-align: left;
     font: normal normal 300 32px/37px Raleway;
     letter-spacing: 0;
@@ -42,29 +29,29 @@
     opacity: 1;
     padding: 16px 136px;
 }
-.page-nav-list {
+.page__nav__list {
     display: flex;
     text-align: center;
     font: normal normal bold 11px/15px Open Sans;
-    letter-spacing: 3.28px;
+    letter-spacing: 3px;
     opacity: 1;
 
 }
 
-.page-nav-list a {
+.page__nav__list a {
     padding: 15px 30px;
     text-transform: uppercase;
     text-decoration: none;
     color: #A5A5A5;
 }
 
-.page-nav-list a:hover {
+.page__nav__list a:hover {
     border-bottom: 4px solid #08A6E4;
     opacity: 1;
     color: #000000;
 }
 
-/*sprawdzić dlaczego webstorm wyrzuca zmienne jako błąd!!*/
+/*na zmiennych webstorm wyrzuca błędy*/
 
 /*banner*/
 
@@ -80,7 +67,7 @@
     background-image: url("../assets/Background.png");
     background-size: contain;
 }
-.banner-title {
+.banner__title {
     text-align: center;
     font: normal normal normal 49px/57px Raleway;
     letter-spacing: 0;
@@ -89,7 +76,7 @@
     margin-top: -25%;
 }
 
-.banner-text {
+.banner__text {
     text-align: center;
     font: normal normal normal 16px/22px Open Sans;
     letter-spacing: 0;
@@ -111,7 +98,81 @@
     text-decoration: none;
 }
 
-.banner-button {
+.banner__button {
     display: flex;
 
+}
+
+/*statystyki*/
+
+.statistics {
+    margin-top: 100px;
+}
+
+.statistics__container {
+    max-width: 850px;
+    margin: 100px auto 120px;
+    display: flex;
+    justify-content: space-between;
+}
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.25rem;
+    text-align: center;
+}
+.statistics__single {
+    max-width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+.statistics__circle {
+    border-radius: 50%;
+    width: 63px;
+    height: 63px;
+    position: relative;
+}
+
+.statistics__img {
+    position: absolute;
+}
+.statistics__single:nth-child(1) .statistics__circle {
+    background-color: #FB3B64;
+}
+
+.statistics__single:nth-child(1) .statistics__img {
+    top: 0;
+    left: 45%;
+}
+
+.statistics__single:nth-child(2) .statistics__circle {
+    background-color:#08A6E4;
+}
+
+.statistics__single:nth-child(2) .statistics__img {
+    top: 14px;
+    left: 47%;
+}
+
+.statistics__single:nth-child(3) .statistics__circle {
+    background-color: #55DFB4;
+}
+
+.statistics__single:nth-child(3) .statistics__img {
+    top: 6px;
+    left: 50%;
+}
+.statistics__number {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 0.1875rem;
+    margin-top: 13px;
+}
+
+.statistics__description {
+    color: #A5A5A5;
+    margin-top: 19px;
 }

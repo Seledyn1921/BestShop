@@ -7,6 +7,8 @@
     width: 1352px;
 }
 
+
+/*header*/
 .page__header {
     background: #FFFFFF 0 0 no-repeat padding-box;
     opacity: 1;
@@ -103,7 +105,7 @@
 
 }
 
-/*statystyki*/
+/*statistics*/
 
 .statistics {
     margin-top: 100px;
@@ -176,3 +178,4 @@ h2 {
     color: #A5A5A5;
     margin-top: 19px;
 }
+/*benefits*/
